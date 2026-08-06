@@ -6,8 +6,6 @@ import useSeo from "@/hooks/use-seo";
 import Footer from "@/components/site/Footer";
 import CTASection from "@/components/site/CTASection";
 import ReservationForm from "@/components/site/ReservationForm";
-import { portfolioProjects } from "@/data/portfolio";
-import { PortfolioCard } from "@/components/site/PortfolioSection";
 
 const details = [
   { icon: Mail, label: "Email", value: "braingigllc@gmail.com", href: "mailto:braingigllc@gmail.com" },
@@ -75,24 +73,6 @@ const ContactUs = () => {
             <ReservationForm />
           </Reveal>
         </div>
-      </div>
-    </Section>
-
-    <Section className="bg-gradient-cream">
-      <Reveal>
-        <div className="mb-10 max-w-3xl">
-          <span className="text-xs uppercase tracking-[0.25em] text-palm">— Recent work</span>
-          <h2 className="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.08] text-ink">
-            A few sites we&apos;ve put live
-          </h2>
-        </div>
-      </Reveal>
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {portfolioProjects.map((p, i) => (
-          <Reveal key={p.title} delay={(i % 3) * 0.06}>
-            <PortfolioCard {...p} cls="h-64 sm:h-72" />
-          </Reveal>
-        ))}
       </div>
     </Section>
 

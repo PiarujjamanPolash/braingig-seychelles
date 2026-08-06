@@ -3,13 +3,13 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+import hotelsImg from "@/assets/hotels.jpg";
+import beachImg from "@/assets/beachclub.jpg";
+import yachtImg from "@/assets/yacht.jpg";
 import divingImg from "@/assets/diving.jpg";
-import portHeysey from "@/assets/portfolio-heysey.png";
-import portSshea from "@/assets/portfolio-sshea.png";
-import portMjpillay from "@/assets/portfolio-mjpillay.png";
-import portSanjuan from "@/assets/portfolio-sanjuan.png";
-import portConfident from "@/assets/portfolio-confident.png";
-import portDmartiis from "@/assets/portfolio-dmartiis.png";
+import port1 from "@/assets/portfolio-1.jpg";
+import port2 from "@/assets/portfolio-2.jpg";
+import port6 from "@/assets/portfolio-6.jpg";
 
 export type Service = {
   slug: string;
@@ -33,7 +33,7 @@ export const services: Service[] = [
     hero: "Websites that turn attention into business growth.",
     intro:
       "Most local businesses in Seychelles are strong in person and quiet online. We design and build complete business websites — custom design, responsive layouts, and SEO-ready structure — so shops, clinics, contractors, agencies, and operators look as capable online as they are on the ground.",
-    image: portHeysey,
+    image: hotelsImg,
     outcomes: [
       "A site customers trust within the first five seconds",
       "Clear structure that answers questions before they are asked",
@@ -58,7 +58,7 @@ export const services: Service[] = [
     hero: "Sell online, take payments, and keep the margin.",
     intro:
       "Whether you sell products, services, or time slots, we build Shopify, WooCommerce, and custom storefronts that handle payments, stock, and confirmations properly — so you sell directly instead of paying a platform for every order.",
-    image: portSanjuan,
+    image: yachtImg,
     outcomes: [
       "Direct sales without per-order commissions",
       "Real stock and availability, no double selling",
@@ -83,7 +83,7 @@ export const services: Service[] = [
     hero: "One page. One goal. Built entirely around the enquiry.",
     intro:
       "A landing page is the fastest way to test an offer, a promotion, or a new service line. We design focused pages with a single path forward, so every visitor either contacts you, buys, or leaves knowing exactly what you do.",
-    image: portMjpillay,
+    image: beachImg,
     outcomes: [
       "Higher conversion from ads and social traffic",
       "A page you can launch in days, not months",
@@ -108,7 +108,7 @@ export const services: Service[] = [
     hero: "Be the business people find when they search in Seychelles.",
     intro:
       "Most buying decisions start with a search. We make sure your business appears for the products, services, and questions your customers are typing — with technical SEO, Google Business Profile work, and content that earns the ranking.",
-    image: portSshea,
+    image: port2,
     outcomes: [
       "Visibility for high-intent local searches",
       "A Google Business Profile that actually generates calls",
@@ -133,7 +133,7 @@ export const services: Service[] = [
     hero: "Look like the business you already are.",
     intro:
       "Pricing power comes from perception. We build identities — logo, palette, typography, imagery direction, and tone — that position your business at the level it deserves, consistently across every touchpoint.",
-    image: portConfident,
+    image: port6,
     outcomes: [
       "Instant recognition across web, print, and social",
       "Confidence to charge what your work is worth",
@@ -158,7 +158,7 @@ export const services: Service[] = [
     hero: "Stay visible every week, not just when you remember.",
     intro:
       "Facebook and Instagram are where local businesses are recommended, compared, and remembered. We plan, produce, and publish content that keeps you in that conversation — and route the interest it creates back to your website.",
-    image: portDmartiis,
+    image: port1,
     outcomes: [
       "A feed that looks intentional, not improvised",
       "Consistent posting without the daily scramble",

@@ -7,7 +7,6 @@ import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";
 import Footer from "@/components/site/Footer";
 import CTASection from "@/components/site/CTASection";
-import PortfolioSection from "@/components/site/PortfolioSection";
 
 const Services = () => {
   useSeo(
@@ -62,21 +61,7 @@ const Services = () => {
       </div>
     </Section>
 
-    <PortfolioSection
-      id="work"
-      compact
-      ctaToContact
-      className="bg-gradient-cream"
-      eyebrow="— Proof in production"
-      title={
-        <>
-          See the kind of work this <span className="font-normal text-coral">delivers.</span>
-        </>
-      }
-      description="Live client projects across travel, hospitality, property, home services, education, and real estate."
-    />
-
-    <Section>
+    <Section className="bg-gradient-cream">
       <Reveal>
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">

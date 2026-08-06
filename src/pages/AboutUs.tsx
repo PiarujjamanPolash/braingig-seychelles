@@ -7,7 +7,6 @@ import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";
 import Footer from "@/components/site/Footer";
 import CTASection from "@/components/site/CTASection";
-import PortfolioSection from "@/components/site/PortfolioSection";
 
 const values = [
   { icon: Waves, t: "Built for how people actually browse", d: "Mobile first, fast on modest connections, readable in bright sunlight — because that is where your customers are." },
@@ -83,19 +82,6 @@ const AboutUs = () => {
         </div>
       </Reveal>
     </Section>
-
-    <PortfolioSection
-      id="work"
-      compact
-      ctaToContact
-      eyebrow="— Work we're proud of"
-      title={
-        <>
-          Real sites. Real clients. <span className="font-normal text-coral">Live today.</span>
-        </>
-      }
-      description="From Seychelles travel and hospitality platforms to property brands and directories abroad — each project built to convert, not just look polished."
-    />
 
     <Section className="bg-gradient-cream">
       <Reveal>

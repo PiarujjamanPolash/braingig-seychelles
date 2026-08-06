@@ -1,13 +1,11 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowRight, Check } from "lucide-react";
 import { getService, services } from "@/data/services";
-import { portfolioProjects } from "@/data/portfolio";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";
 import Footer from "@/components/site/Footer";
 import CTASection from "@/components/site/CTASection";
-import { PortfolioCard } from "@/components/site/PortfolioSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const ServiceDetail = () => {
@@ -110,29 +108,6 @@ const ServiceDetail = () => {
       </Section>
 
       <Section className="bg-gradient-cream">
-        <Reveal>
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <span className="text-xs uppercase tracking-[0.25em] text-palm">— Selected work</span>
-              <h2 className="mt-4 font-display text-3xl font-semibold text-ink md:text-4xl">
-                Projects we&apos;ve shipped
-              </h2>
-            </div>
-            <Link to="/about-us#work" className="text-sm font-medium text-coral">
-              View full portfolio →
-            </Link>
-          </div>
-        </Reveal>
-        <div className="grid gap-5 md:grid-cols-3">
-          {portfolioProjects.slice(0, 3).map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.08} className="h-full">
-              <PortfolioCard {...p} cls="h-72" />
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
         <Reveal>
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
             <h2 className="font-display text-3xl font-semibold text-ink md:text-4xl">Explore other services</h2>

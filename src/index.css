@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BrainGig × Seychelles — Tropical luxury design system. All HSL. */
+
+@layer base {
+  :root {
+    /* Warm cream canvas */
+    --background: 38 40% 96%;
+    --foreground: 200 30% 14%;
+
+    --card: 40 45% 98%;
+    --card-foreground: 200 30% 14%;
+
+    --popover: 40 45% 98%;
+    --popover-foreground: 200 30% 14%;
+
+    /* Deep ocean teal */
+    --primary: 188 55% 22%;
+    --primary-foreground: 38 40% 96%;
+
+    /* Soft aqua */
+    --secondary: 184 45% 88%;
+    --secondary-foreground: 188 55% 22%;
+
+    --muted: 38 25% 92%;
+    --muted-foreground: 200 15% 38%;
+
+    /* Coral CTA */
+    --accent: 14 82% 62%;
+    --accent-foreground: 38 40% 98%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 38 40% 96%;
+
+    --border: 38 25% 86%;
+    --input: 38 25% 86%;
+    --ring: 188 55% 35%;
+
+    --radius: 1.25rem;
+
+    /* Brand-specific tokens */
+    --sand: 38 40% 92%;
+    --sand-deep: 35 30% 84%;
+    --aqua: 184 65% 62%;
+    --aqua-light: 184 70% 88%;
+    --teal: 188 55% 30%;
+    --teal-deep: 195 60% 18%;
+    --palm: 155 35% 32%;
+    --coral: 14 82% 62%;
+    --coral-deep: 12 75% 52%;
+    --sunset: 28 85% 70%;
+    --ink: 200 35% 12%;
+
+    /* Gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(184 65% 62%), hsl(188 55% 30%));
+    --gradient-sunset: linear-gradient(135deg, hsl(28 85% 70%), hsl(14 82% 62%));
+    --gradient-cream: linear-gradient(180deg, hsl(38 40% 96%), hsl(38 35% 92%));
+    --gradient-overlay: linear-gradient(180deg, hsl(195 60% 18% / 0.05), hsl(195 60% 18% / 0.55));
+
+    /* Soft natural shadows */
+    --shadow-soft: 0 10px 40px -15px hsl(195 60% 18% / 0.18);
+    --shadow-float: 0 25px 60px -25px hsl(195 60% 18% / 0.30);
+    --shadow-coral: 0 18px 40px -12px hsl(14 82% 62% / 0.45);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-feature-settings: "ss01", "ss02", "cv11";
+    /* Subtle grain / sand texture */
+    background-image:
+      radial-gradient(hsl(35 30% 75% / 0.18) 1px, transparent 1px),
+      radial-gradient(hsl(35 30% 70% / 0.10) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 2px;
+  }
+
+  h1, h2, h3, h4, .display {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .bg-grain {
+    background-image:
+      radial-gradient(hsl(35 30% 60% / 0.12) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+
+  .ocean-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .blob {
+    border-radius: 62% 38% 54% 46% / 53% 46% 54% 47%;
+  }
+  .blob-2 {
+    border-radius: 38% 62% 36% 64% / 56% 38% 62% 44%;
+  }
+
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-float { box-shadow: var(--shadow-float); }
+  .shadow-coral { box-shadow: var(--shadow-coral); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(2deg); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -10px); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float-slow { animation: float-slow 9s ease-in-out infinite; }
+.animate-drift { animation: drift 12s ease-in-out infinite; }
+.animate-fade-up { animation: fade-up 0.9s var(--transition-smooth) both; }

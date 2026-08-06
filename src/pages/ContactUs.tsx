@@ -9,8 +9,8 @@ import ReservationForm from "@/components/site/ReservationForm";
 
 const details = [
   { icon: Mail, label: "Email", value: "braingigllc@gmail.com", href: "mailto:braingigllc@gmail.com" },
-  { icon: Phone, label: "Phone", value: "+1 (307) 999-4766", href: "tel:+13079994766" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Message the agency", href: "https://wa.me/13079994766" },
+  { icon: Phone, label: "Phone", value: "+248 2 614 082", href: "tel:+2482614082" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Message the agency", href: "https://wa.me/2482614082" },
 ];
 
 const ContactUs = () => {

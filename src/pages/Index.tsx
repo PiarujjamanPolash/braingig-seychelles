@@ -309,16 +309,25 @@ const Work = () => (
 );
 
 const PortfolioCard = ({ img, tag, title, location, cls }: { img: string; tag: string; title: string; location: string; cls: string }) => (
-  <a href="#" className={`group relative overflow-hidden rounded-[2rem] shadow-soft ${cls}`}>
-    <img src={img} alt={title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]" />
-    <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/92 via-teal-deep/45 to-teal-deep/15" />
+  <a href="#" className={`group relative overflow-hidden rounded-[2rem] bg-ink shadow-soft ${cls}`}>
+    <img
+      src={img}
+      alt={title}
+      loading="lazy"
+      className="absolute inset-0 h-full w-full object-cover opacity-75 transition-[transform,opacity] duration-[1.2s] ease-out group-hover:scale-[1.06] group-hover:opacity-65"
+    />
+    {/* Base wash so light photos never wash out white text */}
+    <div className="absolute inset-0 bg-ink/40" />
+    {/* Strong bottom scrim for titles */}
+    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
+    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/95 to-transparent" />
     <div className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-ink backdrop-blur">
       <span className="h-1.5 w-1.5 rounded-full bg-coral" /> {tag}
     </div>
     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white md:p-7">
       <div>
-        <div className="font-display text-2xl font-bold leading-tight md:text-[1.75rem]">{title}</div>
-        <div className="mt-1 text-xs uppercase tracking-[0.2em] text-white/70">{location} · Seychelles</div>
+        <div className="font-display text-2xl font-bold leading-tight [text-shadow:0_2px_12px_hsl(var(--ink)/0.55)] md:text-[1.75rem]">{title}</div>
+        <div className="mt-1 text-xs uppercase tracking-[0.2em] text-white/85 [text-shadow:0_1px_8px_hsl(var(--ink)/0.5)]">{location} · Seychelles</div>
       </div>
       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/15 backdrop-blur-md transition-all group-hover:bg-coral group-hover:rotate-45">
         <ArrowUpRight className="h-5 w-5" />

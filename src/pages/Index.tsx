@@ -3,12 +3,6 @@ import hotelsImg from "@/assets/hotels.jpg";
 import beachImg from "@/assets/beachclub.jpg";
 import yachtImg from "@/assets/yacht.jpg";
 import divingImg from "@/assets/diving.jpg";
-import port1 from "@/assets/portfolio-1.jpg";
-import port2 from "@/assets/portfolio-2.jpg";
-import port3 from "@/assets/portfolio-3.jpg";
-import port4 from "@/assets/portfolio-4.jpg";
-import port5 from "@/assets/portfolio-5.jpg";
-import port6 from "@/assets/portfolio-6.jpg";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ArrowRight, ArrowUpRight, Palmtree, ShoppingBag, Utensils, Briefcase, HardHat,
@@ -21,6 +15,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import Reveal from "@/components/site/Reveal";
 import CTASection from "@/components/site/CTASection";
+import PortfolioSection from "@/components/site/PortfolioSection";
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
 
@@ -251,90 +246,8 @@ const Reviews = () => (
 );
 
 
-/* ---------- Portfolio ---------- */
-const Work = () => (
-  <section id="work" className="relative px-6 py-20 md:px-10 md:py-32">
-    <div className="mx-auto max-w-7xl">
-      <Reveal>
-        <div className="mb-12 grid items-end gap-8 md:mb-16 md:grid-cols-12 md:gap-10">
-          <div className="md:col-span-7">
-            <span className="text-xs uppercase tracking-[0.25em] text-palm">— Selected Work</span>
-            <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
-              A small slice of the
-              <span className="text-coral font-normal"> work we've shipped.</span>
-            </h2>
-          </div>
-          <p className="text-base text-muted-foreground md:col-span-5 md:text-lg">
-            Retailers, restaurants, service providers, and operators across Seychelles —
-            each rebuilt around one job: making it obvious what you do and easy to
-            take the next step.
-          </p>
-        </div>
-      </Reveal>
-
-
-      <Reveal>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-12 md:[grid-template-rows:20rem_20rem]">
-          {[
-            { img: port1, tag: "Hospitality", title: "Anse Lazio Retreat", location: "Praslin",     cls: "md:col-span-7 md:row-span-2" },
-            { img: port2, tag: "Professional Services",  title: "Victoria Legal Chambers", location: "Mahé",        cls: "md:col-span-5 md:row-span-1" },
-            { img: port4, tag: "Restaurant & Café",     title: "Maison Lazare",     location: "Victoria",    cls: "md:col-span-5 md:row-span-1" },
-          ].map((p) => (
-            <PortfolioCard key={p.title} {...p} cls={`${p.cls} h-72 sm:h-80 md:h-auto`} />
-          ))}
-        </div>
-      </Reveal>
-
-      <Reveal>
-        <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3 md:[grid-auto-rows:20rem]">
-          {[
-            { img: port3, tag: "Marine & Trades",  title: "Bleu Marine Services",       location: "Eden Island", cls: "" },
-            { img: port5, tag: "Retail & eCommerce",  title: "Deep Blue Supply Co.",  location: "La Digue",    cls: "" },
-            { img: port6, tag: "Health & Wellness", title: "Frangipani Clinic & Spa",    location: "Beau Vallon", cls: "" },
-
-          ].map((p) => (
-            <PortfolioCard key={p.title} {...p} cls={`${p.cls} h-72 sm:h-80 md:h-auto`} />
-          ))}
-        </div>
-      </Reveal>
-
-      <div className="mt-14 flex justify-center">
-        <a href="#contact" className="group inline-flex items-center gap-3 rounded-full border border-ink/15 bg-card px-7 py-4 text-sm font-medium text-ink shadow-soft transition-all hover:bg-ink hover:text-white">
-          Start your project
-          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </a>
-      </div>
-    </div>
-  </section>
-);
-
-const PortfolioCard = ({ img, tag, title, location, cls }: { img: string; tag: string; title: string; location: string; cls: string }) => (
-  <a href="#" className={`group relative overflow-hidden rounded-[2rem] bg-ink shadow-soft ${cls}`}>
-    <img
-      src={img}
-      alt={title}
-      loading="lazy"
-      className="absolute inset-0 h-full w-full object-cover opacity-75 transition-[transform,opacity] duration-[1.2s] ease-out group-hover:scale-[1.06] group-hover:opacity-65"
-    />
-    {/* Base wash so light photos never wash out white text */}
-    <div className="absolute inset-0 bg-ink/40" />
-    {/* Strong bottom scrim for titles */}
-    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-transparent" />
-    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/95 to-transparent" />
-    <div className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-ink backdrop-blur">
-      <span className="h-1.5 w-1.5 rounded-full bg-coral" /> {tag}
-    </div>
-    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white md:p-7">
-      <div>
-        <div className="font-display text-2xl font-bold leading-tight [text-shadow:0_2px_12px_hsl(var(--ink)/0.55)] md:text-[1.75rem]">{title}</div>
-        <div className="mt-1 text-xs uppercase tracking-[0.2em] text-white/85 [text-shadow:0_1px_8px_hsl(var(--ink)/0.5)]">{location} · Seychelles</div>
-      </div>
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/15 backdrop-blur-md transition-all group-hover:bg-coral group-hover:rotate-45">
-        <ArrowUpRight className="h-5 w-5" />
-      </span>
-    </div>
-  </a>
-);
+/* ---------- Portfolio (shared data: src/data/portfolio.ts) ---------- */
+const Work = () => <PortfolioSection id="work" />;
 
 /* ---------- Industries — Who this is for ---------- */
 const industries = [

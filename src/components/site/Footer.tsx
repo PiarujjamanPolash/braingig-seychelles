@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { services } from "@/data/services";
+import { portfolioProjects } from "@/data/portfolio";
 import Logo from "./Logo";
 
 const Footer = () => (
@@ -15,13 +16,31 @@ const Footer = () => (
           </p>
         </div>
 
-        <div className="md:col-span-5">
+        <div className="md:col-span-3">
           <div className="text-[11px] uppercase tracking-[0.25em] text-palm">Services</div>
-          <div className="mt-4 grid gap-2 sm:grid-cols-2">
-            {services.map((s) => (
+          <div className="mt-4 grid gap-2">
+            {services.slice(0, 5).map((s) => (
               <Link key={s.slug} to={`/services/${s.slug}`} className="text-sm text-ink/70 hover:text-coral">
                 {s.title}
               </Link>
+            ))}
+            <Link to="/services" className="text-sm text-ink/70 hover:text-coral">All services →</Link>
+          </div>
+        </div>
+
+        <div className="md:col-span-2">
+          <div className="text-[11px] uppercase tracking-[0.25em] text-palm">Work</div>
+          <div className="mt-4 grid gap-2">
+            {portfolioProjects.map((p) => (
+              <a
+                key={p.href}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-ink/70 hover:text-coral"
+              >
+                {p.title}
+              </a>
             ))}
           </div>
         </div>
@@ -30,6 +49,7 @@ const Footer = () => (
           <div className="text-[11px] uppercase tracking-[0.25em] text-palm">Agency</div>
           <div className="mt-4 grid gap-2">
             <Link to="/about-us" className="text-sm text-ink/70 hover:text-coral">About Us</Link>
+            <Link to="/about-us#work" className="text-sm text-ink/70 hover:text-coral">Portfolio</Link>
             <Link to="/services" className="text-sm text-ink/70 hover:text-coral">All Services</Link>
             <Link to="/contact-us" className="text-sm text-ink/70 hover:text-coral">Contact Us</Link>
           </div>

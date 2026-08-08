@@ -32,7 +32,7 @@ const AboutUs = () => {
     />
 
     <Section>
-      <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+      <div className="grid gap-8 md:grid-cols-12 md:gap-14">
         <div className="md:col-span-7">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— Our story</span>
@@ -85,7 +85,7 @@ const AboutUs = () => {
 
     <Section className="bg-gradient-cream">
       <Reveal>
-        <div className="mb-10 max-w-3xl md:mb-14">
+        <div className="mb-8 max-w-3xl md:mb-14">
           <span className="text-xs uppercase tracking-[0.25em] text-palm">— How we work</span>
           <h2 className="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.08] text-ink">
             The principles behind every <span className="font-normal text-coral">project.</span>
@@ -106,7 +106,7 @@ const AboutUs = () => {
         ))}
       </div>
       <Reveal>
-        <div className="mt-14">
+        <div className="mt-8 md:mt-14">
           <Link to="/services" className="group inline-flex items-center gap-3 rounded-full border border-ink/15 bg-card px-7 py-4 text-sm font-medium text-ink shadow-soft transition-all hover:bg-ink hover:text-white">
             See what we do <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>

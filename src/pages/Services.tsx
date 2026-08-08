@@ -26,7 +26,7 @@ const Services = () => {
 
     <Section>
       <Reveal>
-        <div className="mb-12 grid items-end gap-8 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— What we do</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -63,7 +63,7 @@ const Services = () => {
 
     <Section className="bg-gradient-cream">
       <Reveal>
-        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+        <div className="grid gap-8 md:grid-cols-12 md:items-end">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— How engagements work</span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.08] text-ink md:text-5xl">
@@ -78,7 +78,7 @@ const Services = () => {
         </div>
       </Reveal>
 
-      <div className="mt-14 grid gap-8 md:grid-cols-3">
+      <div className="mt-8 grid gap-5 md:mt-14 md:grid-cols-3 md:gap-8">
         {[
           { n: "01", t: "Discovery", d: "We map your goals, audience, and competitors, then scope the right service mix." },
           { n: "02", t: "Build", d: "Approve the direction and we build the full site, store, or brand system." },

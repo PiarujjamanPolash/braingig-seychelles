@@ -82,10 +82,10 @@ const PortfolioSection = ({
   ),
   description = "Live platforms and brand sites we've designed and built — from Seychelles travel and hospitality to property, pools, and community directories abroad.",
 }: PortfolioSectionProps) => (
-  <section id={id} className={cn("relative px-6 py-20 md:px-10 md:py-32", className)}>
+  <section id={id} className={cn("relative px-6 py-16 md:px-10 md:py-32", className)}>
     <div className="mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-12 grid items-end gap-8 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">{eyebrow}</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -125,7 +125,7 @@ const PortfolioSection = ({
       )}
 
       {showCta && (
-        <div className="mt-14 flex justify-center">
+        <div className="mt-8 flex justify-center md:mt-14">
           {ctaToContact ? (
             <Link
               to="/contact-us"

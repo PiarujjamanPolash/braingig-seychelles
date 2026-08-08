@@ -30,7 +30,7 @@ const ServiceDetail = () => {
       />
 
       <Section>
-        <div className="grid gap-14 md:grid-cols-12">
+        <div className="grid gap-8 md:grid-cols-12 md:gap-14">
           <div className="md:col-span-7">
             <Reveal>
               <span className="text-xs uppercase tracking-[0.25em] text-palm">— Overview</span>
@@ -62,7 +62,7 @@ const ServiceDetail = () => {
 
       <Section className="bg-gradient-cream">
         <Reveal>
-          <div className="mb-14 max-w-3xl">
+          <div className="mb-8 max-w-3xl md:mb-14">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— What's included</span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.08] text-ink md:text-5xl">
               Everything handled, <span className="font-normal text-coral">end to end.</span>
@@ -83,7 +83,7 @@ const ServiceDetail = () => {
       </Section>
 
       <Section>
-        <div className="grid gap-14 md:grid-cols-12">
+        <div className="grid gap-8 md:grid-cols-12 md:gap-14">
           <div className="md:col-span-5">
             <Reveal>
               <span className="text-xs uppercase tracking-[0.25em] text-palm">— Questions</span>
@@ -109,7 +109,7 @@ const ServiceDetail = () => {
 
       <Section className="bg-gradient-cream">
         <Reveal>
-          <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-12 md:gap-6">
             <h2 className="font-display text-3xl font-semibold text-ink md:text-4xl">Explore other services</h2>
             <Link to="/services" className="text-sm font-medium text-coral">View all services →</Link>
           </div>

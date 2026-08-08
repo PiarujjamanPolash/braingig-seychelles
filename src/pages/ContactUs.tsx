@@ -30,7 +30,7 @@ const ContactUs = () => {
     />
 
     <Section>
-      <div className="grid gap-10 md:grid-cols-12 md:gap-14">
+      <div className="grid gap-8 md:grid-cols-12 md:gap-14">
         <div className="md:col-span-5">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— Get in touch</span>

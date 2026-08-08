@@ -3,9 +3,9 @@ import { services } from "@/data/services";
 import Logo from "./Logo";
 
 const Footer = () => (
-  <footer className="border-t border-border bg-sand/40 px-6 py-14 md:px-10 md:py-16">
+  <footer className="border-t border-border bg-sand/40 px-6 py-10 md:px-10 md:py-16">
     <div className="mx-auto max-w-7xl">
-      <div className="grid gap-10 md:grid-cols-12">
+      <div className="grid gap-8 md:grid-cols-12">
         <div className="md:col-span-4">
           <Logo />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -45,7 +45,7 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-center text-sm text-muted-foreground md:flex-row md:text-left">
+      <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-center text-sm text-muted-foreground md:mt-12 md:flex-row md:text-left">
         <div>© {new Date().getFullYear()} BrainGig LLC · All rights reserved</div>
         <div>Serving Seychelles · Remote · Worldwide</div>
       </div>

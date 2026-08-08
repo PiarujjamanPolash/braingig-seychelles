@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] overflow-hidden md:h-[100svh] md:max-h-[100svh]"
+      className="relative overflow-hidden md:h-[100svh] md:max-h-[100svh]"
     >
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -50,8 +50,8 @@ const Hero = () => {
 
       <Nav overlay />
 
-      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-5xl flex-col items-center px-5 pb-14 pt-[5.5rem] text-center sm:px-6 sm:pb-12 sm:pt-28 md:h-full md:justify-center md:px-10 md:pb-10">
-        <div className="animate-fade-up flex w-full flex-col items-center md:my-auto">
+      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-12 pt-24 text-center sm:px-6 sm:pb-14 sm:pt-28 md:h-full md:justify-center md:px-10 md:pb-10">
+        <div className="animate-fade-up flex w-full flex-col items-center">
           <span className="mb-4 inline-flex max-w-full items-center gap-2 self-center rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur-md sm:mb-5 sm:px-4 sm:tracking-[0.2em] sm:text-[11px]">
             <Palmtree className="h-3.5 w-3.5 shrink-0" /> Digital Growth Agency · Seychelles
           </span>
@@ -79,7 +79,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-10 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-7 text-white/85 sm:mt-10 sm:gap-x-5 md:mt-14 md:grid-cols-4 md:justify-items-center">
+        <div className="mt-8 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-6 text-white/85 sm:mt-10 sm:gap-x-5 md:mt-14 md:grid-cols-4 md:justify-items-center">
           {[
             [ShieldCheck, "Direct with the team"],
             [Smartphone, "Mobile-first & SEO-ready"],
@@ -113,13 +113,13 @@ const Strip = () => (
 
 /* ---------- Services Overview ---------- */
 const ServicesOverview = () => (
-  <section id="services" className="relative overflow-hidden bg-gradient-cream px-6 py-20 md:px-10 md:py-32">
+  <section id="services" className="relative overflow-hidden bg-gradient-cream px-6 py-16 md:px-10 md:py-32">
     <div className="pointer-events-none absolute -left-24 top-32 h-80 w-80 blob bg-aqua-light/70 blur-3xl animate-float-slow" />
     <div className="pointer-events-none absolute -right-32 bottom-32 h-96 w-96 blob-2 bg-sunset/25 blur-3xl" />
 
     <div className="relative mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-12 grid items-end gap-8 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— What we do</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -155,7 +155,7 @@ const ServicesOverview = () => (
         ))}
       </div>
 
-      <Reveal className="mt-12">
+      <Reveal className="mt-8 md:mt-12">
         <Link to="/services" className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
           View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
@@ -226,10 +226,10 @@ const ReviewCard = ({ r }: { r: (typeof reviews)[number] }) => {
 };
 
 const Reviews = () => (
-  <section className="px-6 py-20 md:px-10 md:py-32">
+  <section className="px-6 py-16 md:px-10 md:py-32">
     <div className="mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-12 grid items-end gap-8 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— Testimonials</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -287,13 +287,13 @@ const industries = [
 const Industries = () => {
   const [active, setActive] = useState(0);
   return (
-    <section id="who" className="relative overflow-hidden bg-gradient-cream px-6 py-20 md:px-10 md:py-32">
+    <section id="who" className="relative overflow-hidden bg-gradient-cream px-6 py-16 md:px-10 md:py-32">
       <div className="pointer-events-none absolute -left-24 top-32 h-80 w-80 blob bg-aqua-light/70 blur-3xl animate-float-slow" />
       <div className="pointer-events-none absolute -right-32 bottom-32 h-96 w-96 blob-2 bg-sunset/25 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <Reveal>
-          <div className="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end md:gap-8">
+          <div className="mb-8 flex flex-col items-start justify-between gap-5 md:mb-16 md:flex-row md:items-end md:gap-8">
             <div className="max-w-2xl">
               <span className="text-xs uppercase tracking-[0.25em] text-palm">— Who we work with</span>
               <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.04] text-ink">
@@ -403,7 +403,7 @@ const steps = [
 ];
 
 const Process = () => (
-  <section id="process" className="relative overflow-hidden bg-gradient-cream px-6 py-20 md:px-10 md:py-32">
+  <section id="process" className="relative overflow-hidden bg-gradient-cream px-6 py-16 md:px-10 md:py-32">
     <div className="pointer-events-none absolute -right-20 top-32 h-72 w-72 blob bg-aqua-light/40 blur-3xl" />
     <div className="pointer-events-none absolute -left-16 bottom-20 h-72 w-72 blob-2 bg-sunset/15 blur-3xl" />
 
@@ -428,7 +428,7 @@ const Process = () => (
         </div>
       </Reveal>
 
-      <ol className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-5 md:mt-16">
+      <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5 md:mt-16">
 
         {steps.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.07} className="h-full">
@@ -454,13 +454,13 @@ const Process = () => (
 
 /* ---------- Promises ---------- */
 const Promises = () => (
-  <section className="relative overflow-hidden bg-teal-deep px-6 py-20 text-white md:px-10 md:py-32">
+  <section className="relative overflow-hidden bg-teal-deep px-6 py-16 text-white md:px-10 md:py-32">
     <div className="pointer-events-none absolute -top-20 right-10 h-80 w-80 blob bg-aqua/20 blur-3xl animate-float-slow" />
     <div className="pointer-events-none absolute bottom-0 -left-20 h-96 w-96 blob-2 bg-sunset/15 blur-3xl" />
 
     <div className="relative mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-12 max-w-3xl md:mb-16">
+        <div className="mb-8 max-w-3xl md:mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-aqua">— Our promises to you</span>
           <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06]">
             We don't just build websites.<br />
@@ -469,7 +469,7 @@ const Promises = () => (
         </div>
       </Reveal>
 
-      <div className="grid gap-10 md:grid-cols-3 md:gap-12">
+      <div className="grid gap-8 md:grid-cols-3 md:gap-12">
         {[
           { n: "01", t: "Built to convert",         d: "Every section is designed to help people trust your business, understand your value, and take the next step." },
           { n: "02", t: "Made for mobile first",    d: "Most local discovery happens on a phone. Your business should look sharp there first, not last." },

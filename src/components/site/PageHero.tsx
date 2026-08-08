@@ -13,16 +13,15 @@ const PageHero = ({
   image: string;
   crumbs?: { label: string; to?: string }[];
 }) => (
-  <section className="relative flex min-h-[100svh] flex-col overflow-hidden md:h-[100svh] md:max-h-[100svh]">
+  <section className="relative flex flex-col overflow-hidden md:h-[100svh] md:max-h-[100svh]">
     <Nav overlay />
-    {/* Match home hero: full viewport + scaled cover so edges don’t clip */}
     <div
       className="absolute inset-0 -z-10 bg-cover bg-[center_20%]"
       style={{ backgroundImage: `url(${image})`, transform: "scale(1.08)" }}
     />
     <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/70 via-teal-deep/55 to-teal-deep/85" />
-    <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col items-start justify-end px-5 pb-14 pt-28 sm:px-6 md:justify-center md:px-10 md:pb-20 md:pt-28">
-      <nav className="mb-5 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/60 md:mb-6">
+    <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col items-start px-6 pb-12 pt-28 md:justify-center md:px-10 md:pb-20">
+      <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/60">
         <Link to="/" className="hover:text-white">Home</Link>
         {crumbs.map((c) => (
           <span key={c.label} className="flex items-center gap-1.5">
@@ -34,16 +33,16 @@ const PageHero = ({
       <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-white backdrop-blur-md">
         {eyebrow}
       </span>
-      <h1 className="mt-5 w-full max-w-4xl font-display text-[clamp(1.85rem,8vw,4.8rem)] font-semibold leading-[1.08] text-white text-balance md:mt-6 md:leading-[1.04]">
+      <h1 className="mt-6 w-full max-w-4xl font-display text-[clamp(1.85rem,8vw,4.8rem)] font-semibold leading-[1.08] text-white text-balance md:leading-[1.04]">
         {title} {highlight && <span className="font-normal text-sunset">{highlight}</span>}
       </h1>
-      <p className="mt-4 w-full max-w-2xl text-base text-white/85 text-pretty md:mt-6 md:text-lg">{text}</p>
+      <p className="mt-6 w-full max-w-2xl text-base text-white/85 text-pretty md:text-lg">{text}</p>
     </div>
   </section>
 );
 
 export const Section = ({ children, className = "" }: { children: ReactNode; className?: string }) => (
-  <section className={`px-6 py-24 md:px-10 md:py-32 ${className}`}>
+  <section className={`px-6 py-16 md:px-10 md:py-32 ${className}`}>
     <div className="mx-auto max-w-7xl">{children}</div>
   </section>
 );

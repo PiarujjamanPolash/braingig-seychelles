@@ -1,5 +1,5 @@
 import { Mail, MessageCircle, Phone } from "lucide-react";
-import divingImg from "@/assets/diving.jpg";
+import heroImg from "@/assets/ps-hero.png";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";
@@ -25,7 +25,7 @@ const ContactUs = () => {
       title="Let's talk about your business,"
       highlight="and where it should be going."
       text="Send us a few details and we'll come back within 24 hours — usually with a first idea already sketched out."
-      image={divingImg}
+      image={heroImg}
       crumbs={[{ label: "Contact Us" }]}
     />
 

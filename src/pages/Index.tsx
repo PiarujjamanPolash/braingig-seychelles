@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-island.jpg";
+import heroImg from "@/assets/hero.png";
 import hotelsImg from "@/assets/hotels.jpg";
 import beachImg from "@/assets/beachclub.jpg";
 import yachtImg from "@/assets/yacht.jpg";

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, Sparkles, Waves } from "lucide-react";
-import beachImg from "@/assets/beachclub.jpg";
+import heroImg from "@/assets/rc-hero.png";
 import yachtImg from "@/assets/yacht.jpg";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";
@@ -27,7 +27,7 @@ const AboutUs = () => {
       title="A small agency built around one idea:"
       highlight="good businesses deserve better websites."
       text="We work with shops, restaurants, clinics, contractors, professional firms, and operators across Mahé, Praslin, and La Digue."
-      image={beachImg}
+      image={heroImg}
       crumbs={[{ label: "About Us" }]}
     />
 

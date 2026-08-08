@@ -28,13 +28,21 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <section id="top" className="relative h-[100svh] max-h-[100svh] overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImg})`, transform: `translateY(${offset}px) scale(1.08)`, filter: "saturate(0.9) blur(1.5px)" }} />
+    <section
+      id="top"
+      className="relative min-h-[100svh] overflow-hidden md:h-[100svh] md:max-h-[100svh]"
+    >
+      <div
+        className="absolute inset-0 -z-10 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+          transform: `translateY(${offset}px) scale(1.08)`,
+          filter: "saturate(0.9) blur(1.5px)",
+        }}
+      />
       <div className="absolute inset-0 -z-10 ocean-overlay" />
       <div className="absolute inset-0 -z-10 bg-teal-deep/55" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/80 via-teal-deep/40 to-teal-deep/90" />
-      {/* centre focus vignette keeps headline legible over busy imagery */}
       <div
         className="absolute inset-0 -z-10"
         style={{ background: "radial-gradient(ellipse 70% 55% at 50% 48%, hsl(var(--teal-deep) / 0.55), transparent 70%)" }}
@@ -42,55 +50,57 @@ const Hero = () => {
 
       <Nav overlay />
 
-      <div className="relative mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-6 pb-10 pt-28 text-center md:px-10">
-        <div className="animate-fade-up flex flex-col items-center">
-          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-md sm:text-[11px]">
-            <Palmtree className="h-3.5 w-3.5" /> Digital Growth Agency · Seychelles
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-5xl flex-col items-center px-5 pb-14 pt-[5.5rem] text-center sm:px-6 sm:pb-12 sm:pt-28 md:h-full md:justify-center md:px-10 md:pb-10">
+        <div className="animate-fade-up flex w-full flex-col items-center md:my-auto">
+          <span className="mb-4 inline-flex max-w-full items-center gap-2 self-center rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur-md sm:mb-5 sm:px-4 sm:tracking-[0.2em] sm:text-[11px]">
+            <Palmtree className="h-3.5 w-3.5 shrink-0" /> Digital Growth Agency · Seychelles
           </span>
-          <h1 className="font-display text-[clamp(2rem,6vw,4.75rem)] font-semibold leading-[1.06] text-white text-balance [text-shadow:0_2px_28px_hsl(var(--teal-deep)/0.7)]">
+          {/* w-full prevents text-balance from shrink-wrapping into a narrow column on mobile */}
+          <h1 className="w-full font-display text-[clamp(1.75rem,7vw,4.75rem)] font-semibold leading-[1.12] text-white text-balance [text-shadow:0_2px_28px_hsl(var(--teal-deep)/0.7)] sm:leading-[1.06]">
             We build websites that turn<br className="hidden sm:block" />{" "}
             attention into <span className="text-sunset font-normal">business growth.</span>
           </h1>
-          <p className="mt-5 max-w-2xl text-sm text-white/95 text-pretty [text-shadow:0_1px_16px_hsl(var(--teal-deep)/0.65)] sm:text-base md:text-lg">
+          <p className="mt-4 w-full max-w-2xl text-[0.9375rem] leading-relaxed text-white/95 text-pretty [text-shadow:0_1px_16px_hsl(var(--teal-deep)/0.65)] sm:mt-5 sm:text-base md:text-lg">
             Strategy, design, development, SEO, and marketing for Seychelles businesses —
             shops, restaurants, clinics, contractors, and service providers who want their
             website to actually bring in customers.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-            <a href="/services" className="group inline-flex items-center gap-3 rounded-full bg-coral px-6 py-3 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:px-7 sm:py-3.5 sm:text-base">
+          <div className="mt-7 flex w-full flex-col items-center gap-3.5 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-5">
+            <a
+              href="/services"
+              className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-coral px-6 py-3.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:w-auto sm:max-w-none sm:px-7 sm:py-3.5 sm:text-base"
+            >
               Explore Our Services
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
-            <a href="#work" className="group inline-flex items-center gap-2 text-sm text-white/90">
-              <span className="h-px w-10 bg-white/60 transition-all group-hover:w-16" /> See Our Work
+            <a href="#work" className="group inline-flex items-center gap-2 py-1 text-sm text-white/90">
+              <span className="hidden h-px w-10 bg-white/60 transition-all group-hover:w-16 sm:block" /> See Our Work
             </a>
           </div>
         </div>
 
-        <div className="mt-10 grid w-full grid-cols-2 justify-items-start gap-x-4 gap-y-3 border-t border-white/15 pt-6 text-white/85 sm:justify-items-center md:mt-14 md:grid-cols-4">
+        <div className="mt-10 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-7 text-white/85 sm:mt-10 sm:gap-x-5 md:mt-14 md:grid-cols-4 md:justify-items-center">
           {[
             [ShieldCheck, "Direct with the team"],
             [Smartphone, "Mobile-first & SEO-ready"],
             [CalendarCheck, "Reply within one working day"],
             [Zap, "Fast-loading builds"],
           ].map(([Icon, label]) => (
-            <div key={label as string} className="flex items-center gap-2.5">
-              {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 text-sunset shrink-0" />; })()}
-              <div className="text-[10px] uppercase tracking-[0.16em] md:text-[11px]">{label as string}</div>
+            <div key={label as string} className="flex items-center gap-2 justify-self-center sm:justify-self-auto md:justify-center">
+              {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 shrink-0 text-sunset" />; })()}
+              <div className="text-left text-[10px] uppercase tracking-[0.14em] md:text-[11px] md:tracking-[0.16em]">{label as string}</div>
             </div>
           ))}
         </div>
       </div>
-
-
     </section>
   );
 };
 
 /* ---------- Marquee strip ---------- */
 const Strip = () => (
-  <div className="border-y border-border bg-sand/50 py-5 overflow-hidden">
-    <div className="flex animate-drift items-center justify-around gap-12 whitespace-nowrap px-6 text-xs uppercase tracking-[0.3em] text-ink/60 md:text-sm">
+  <div className="w-full max-w-[100vw] overflow-hidden border-y border-border bg-sand/50 py-5">
+    <div className="flex min-w-0 animate-drift items-center justify-around gap-8 whitespace-nowrap px-6 text-xs uppercase tracking-[0.3em] text-ink/60 sm:gap-12 md:text-sm">
       <span>Mahé</span><span className="text-coral">✦</span>
       <span>Praslin</span><span className="text-coral">✦</span>
       <span>La Digue</span><span className="text-coral">✦</span>
@@ -480,7 +490,7 @@ const Promises = () => (
 );
 
 const Index = () => (
-  <main className="relative">
+  <main className="relative overflow-x-hidden">
     <Hero />
     <Strip />
     <ServicesOverview />

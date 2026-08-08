@@ -86,12 +86,14 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     font-feature-settings: "ss01", "ss02", "cv11";
+    overflow-x: hidden;
     /* Subtle grain / sand texture */
     background-image:
       radial-gradient(hsl(35 30% 75% / 0.18) 1px, transparent 1px),

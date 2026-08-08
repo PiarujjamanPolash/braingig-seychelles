@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Compass, HeartHandshake, Sparkles, Waves } from "lucide-react";
 import beachImg from "@/assets/about-hero.jpg";
-import yachtImg from "@/assets/yacht.jpg";
+import yachtImg from "@/assets/our-story.jpg";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";

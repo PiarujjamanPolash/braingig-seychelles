@@ -1,8 +1,8 @@
 import heroImg from "@/assets/hero.png";
-import hotelsImg from "@/assets/hotels.jpg";
-import beachImg from "@/assets/beachclub.jpg";
-import yachtImg from "@/assets/yacht.jpg";
-import divingImg from "@/assets/diving.jpg";
+import hotelsImg from "@/assets/re.jpg";
+import beachImg from "@/assets/rc.png";
+import yachtImg from "@/assets/ps.jpg";
+import divingImg from "@/assets/tmt.jpg";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ArrowRight, ArrowUpRight, Palmtree, ShoppingBag, Utensils, Briefcase, HardHat,
@@ -376,7 +376,7 @@ const Industries = () => {
             <Reveal key={it.title} delay={i * 0.05}>
               <article className="relative overflow-hidden rounded-[2rem] shadow-soft">
                 <img src={it.img} alt={it.title} loading="lazy" className="h-72 w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/92 via-teal-deep/55 to-teal-deep/25" />
+                <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/[0.92] via-teal-deep/55 to-teal-deep/25" />
                 <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
                   <span className="grid h-11 w-11 place-items-center rounded-full bg-background/90"><it.icon className="h-5 w-5 text-teal" /></span>
                   <div>

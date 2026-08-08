@@ -13,13 +13,15 @@ const PageHero = ({
   image: string;
   crumbs?: { label: string; to?: string }[];
 }) => (
-  <section className="relative overflow-hidden">
+  <section className="relative flex h-[100svh] max-h-[100svh] flex-col overflow-hidden">
     <Nav overlay />
-    <div className="absolute inset-0 -z-10">
-      <img src={image} alt="" className="h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-teal-deep/70 via-teal-deep/55 to-teal-deep/85" />
-    </div>
-    <div className="mx-auto max-w-7xl px-6 pb-20 pt-40 md:px-10 md:pb-28 md:pt-52">
+    {/* Match home hero: full viewport + scaled cover so edges don’t clip */}
+    <div
+      className="absolute inset-0 -z-10 bg-cover bg-[center_20%]"
+      style={{ backgroundImage: `url(${image})`, transform: "scale(1.08)" }}
+    />
+    <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/70 via-teal-deep/55 to-teal-deep/85" />
+    <div className="relative mx-auto flex w-full max-w-7xl flex-1 flex-col items-start justify-center px-6 pb-16 pt-28 md:px-10 md:pb-20">
       <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/60">
         <Link to="/" className="hover:text-white">Home</Link>
         {crumbs.map((c) => (

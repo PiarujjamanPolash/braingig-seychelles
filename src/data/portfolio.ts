@@ -1,7 +1,7 @@
 import portHeysey from "@/assets/portfolio-heysey.png";
 import portSshea from "@/assets/portfolio-sshea.png";
 import portMjpillay from "@/assets/portfolio-mjpillay.png";
-import portSanjuan from "@/assets/portfolio-sanjuan.png";
+import portPremier from "@/assets/portfolio-premier.png";
 import portConfident from "@/assets/portfolio-confident.png";
 import portDmartiis from "@/assets/portfolio-dmartiis.png";
 
@@ -46,11 +46,11 @@ export const portfolioProjects: PortfolioProject[] = [
     cls: "md:col-span-5 md:row-span-1",
   },
   {
-    title: "San Juan Pools of Arizona",
+    title: "The Premier Pool Co",
     tag: "Home Services",
-    location: "Arizona, USA",
-    href: "https://sanjuanpoolsofarizona.com/",
-    img: portSanjuan,
+    location: "Ohio, USA",
+    href: "https://thepremierpoolco.com/",
+    img: portPremier,
   },
   {
     title: "Confident & Capable",

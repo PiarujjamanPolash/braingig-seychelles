@@ -121,7 +121,7 @@ const PortfolioSection = ({
           {ctaToContact ? (
             <Link
               to="/contact-us"
-              className="group inline-flex items-center gap-3 rounded-full border border-ink/15 bg-card px-7 py-4 text-sm font-medium text-ink shadow-soft transition-all hover:bg-ink hover:text-white"
+              className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep"
             >
               Start your project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -129,7 +129,7 @@ const PortfolioSection = ({
           ) : (
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 rounded-full border border-ink/15 bg-card px-7 py-4 text-sm font-medium text-ink shadow-soft transition-all hover:bg-ink hover:text-white"
+              className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep"
             >
               Start your project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -1,14 +1,24 @@
-export const CalendlyEmbed = () => (
-  <div className="w-full overflow-hidden bg-background" style={{ minWidth: 320, height: 780 }}>
-    <iframe
-      src="https://calendly.com/braingig/hello?hide_gdpr_banner=1&background_color=ffffff&text_color=1a1a1a&primary_color=ff6b4a"
-      width="100%"
-      height="100%"
-      frameBorder="0"
-      title="Schedule a call with BrainGig"
-      className="block h-full w-full"
-    />
-  </div>
-);
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
+
+export const CalendlyEmbed = () => {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "talk" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
+
+  return (
+    <div className="w-full bg-background" style={{ minWidth: 320, height: 780 }}>
+      <Cal
+        namespace="talk"
+        calLink="braingig/talk"
+        style={{ width: "100%", height: "100%", overflow: "scroll" }}
+        config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+      />
+    </div>
+  );
+};
 
 export default CalendlyEmbed;

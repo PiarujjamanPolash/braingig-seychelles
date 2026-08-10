@@ -95,8 +95,8 @@ const AboutUs = () => {
       <div className="grid gap-5 md:grid-cols-2">
         {values.map((v, i) => (
           <Reveal key={v.t} delay={(i % 2) * 0.08} className="h-full">
-            <div className="h-full rounded-[2rem] border border-border bg-card p-8 shadow-soft">
-              <span className="grid h-12 w-12 place-items-center rounded-full bg-secondary text-teal">
+            <div className="group h-full rounded-[2rem] border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-float">
+              <span className="grid h-12 w-12 place-items-center rounded-full bg-secondary text-teal transition-colors group-hover:bg-coral group-hover:text-white">
                 <v.icon className="h-5 w-5" />
               </span>
               <h3 className="mt-5 font-display text-2xl font-bold text-ink">{v.t}</h3>
@@ -107,7 +107,7 @@ const AboutUs = () => {
       </div>
       <Reveal>
         <div className="mt-8 md:mt-14">
-          <Link to="/services" className="group inline-flex items-center gap-3 rounded-full border border-ink/15 bg-card px-7 py-4 text-sm font-medium text-ink shadow-soft transition-all hover:bg-ink hover:text-white">
+          <Link to="/services" className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
             See what we do <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>

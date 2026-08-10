@@ -72,7 +72,7 @@ const ServiceDetail = () => {
         <div className="grid gap-5 md:grid-cols-2">
           {service.deliverables.map((d, i) => (
             <Reveal key={d.title} delay={(i % 2) * 0.08} className="h-full">
-              <div className="h-full rounded-[2rem] border border-border bg-card p-8 shadow-soft">
+              <div className="h-full rounded-[2rem] border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-float">
                 <div className="font-display text-xs font-bold tracking-[0.2em] text-coral">0{i + 1}</div>
                 <h3 className="mt-3 font-display text-2xl font-bold text-ink">{d.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d.text}</p>

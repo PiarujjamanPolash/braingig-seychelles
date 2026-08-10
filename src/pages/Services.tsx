@@ -83,8 +83,8 @@ const Services = () => {
           { n: "03", t: "Grow", d: "Search, content, and campaigns keep the calendar full through every season." },
         ].map((b, i) => (
           <Reveal key={b.n} delay={i * 0.1}>
-            <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
-              <div className="font-display text-5xl font-bold text-aqua/50">{b.n}</div>
+            <div className="group rounded-[2rem] border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-float">
+              <div className="font-display text-5xl font-bold text-aqua/50 transition-colors group-hover:text-coral">{b.n}</div>
               <h3 className="mt-4 font-display text-2xl font-bold text-ink">{b.t}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{b.d}</p>
             </div>

@@ -18,41 +18,33 @@ export const PortfolioCard = ({
   location,
   cls,
 }: PortfolioProject & { cls?: string }) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={cn(
-      "group relative overflow-hidden rounded-[2rem] bg-ink shadow-soft",
-      cls
-    )}
-  >
-    <img
-      src={img}
-      alt={`${title} website`}
-      loading="lazy"
-      className="absolute inset-0 h-full w-full object-cover object-top opacity-80 transition-[transform,opacity] duration-[1.2s] ease-out group-hover:scale-[1.04] group-hover:opacity-70"
-    />
-    <div className="absolute inset-0 bg-ink/35" />
-    <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-transparent" />
-    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-ink/95 to-transparent" />
-    <div className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-ink backdrop-blur">
-      <span className="h-1.5 w-1.5 rounded-full bg-coral" /> {tag}
-    </div>
-    <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6 text-white md:p-7">
-      <div>
-        <div className="font-display text-2xl font-bold leading-tight [text-shadow:0_2px_12px_hsl(var(--ink)/0.55)] md:text-[1.75rem]">
-          {title}
-        </div>
-        <div className="mt-1 text-xs uppercase tracking-[0.2em] text-white/85 [text-shadow:0_1px_8px_hsl(var(--ink)/0.5)]">
-          {location}
-        </div>
+  <div className="group">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cn(
+        "relative overflow-hidden rounded-[2rem] bg-ink shadow-soft block aspect-video",
+        cls
+      )}
+    >
+      <img
+        src={img}
+        alt={`${title} website`}
+        loading="lazy"
+        className="h-full w-full object-cover object-top transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
+      />
+      <div className="absolute left-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-background/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-ink backdrop-blur">
+        <span className="h-1.5 w-1.5 rounded-full bg-coral" /> {tag}
       </div>
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/15 backdrop-blur-md transition-all group-hover:bg-coral group-hover:rotate-45">
-        <ArrowUpRight className="h-5 w-5" />
-      </span>
+    </a>
+    <div className="mt-4 px-1">
+      <h3 className="font-display text-lg font-semibold text-ink">
+        {title}
+      </h3>
+      <p className="mt-1 text-sm text-muted-foreground">{location}</p>
     </div>
-  </a>
+  </div>
 );
 
 type PortfolioSectionProps = {
@@ -70,7 +62,7 @@ type PortfolioSectionProps = {
 const PortfolioSection = ({
   id = "work",
   className,
-  compact = false,
+  compact = true,
   showCta = true,
   ctaToContact = false,
   eyebrow = "— Selected Work",
@@ -100,7 +92,7 @@ const PortfolioSection = ({
         <Reveal>
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {portfolioProjects.map((p) => (
-              <PortfolioCard key={p.title} {...p} cls="h-72 sm:h-80" />
+              <PortfolioCard key={p.title} {...p} />
             ))}
           </div>
         </Reveal>

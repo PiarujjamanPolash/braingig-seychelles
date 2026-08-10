@@ -18,7 +18,7 @@ const values = [
 const AboutUs = () => {
   useSeo(
     "About BrainGig | Digital Growth Agency for Seychelles Businesses",
-    "BrainGig is a digital growth agency building websites, online stores, brands and marketing for businesses across Seychelles."
+    "BrainGig Pty Ltd is a digital growth agency building websites, online stores, brands and marketing for businesses across Seychelles."
   );
   return (
   <main className="relative">
@@ -26,7 +26,7 @@ const AboutUs = () => {
       eyebrow="About Us"
       title="A small agency built around one idea:"
       highlight="good businesses deserve better websites."
-      text="We work with shops, restaurants, clinics, contractors, professional firms, and operators across Mahé, Praslin, and La Digue."
+      text="We work with shops, restaurants, clinics, contractors, professional firms, and operators across Seychelles."
       image={beachImg}
       crumbs={[{ label: "About Us" }]}
     />
@@ -46,7 +46,7 @@ const AboutUs = () => {
                 losing quotes to a competitor with a better first impression.
               </p>
               <p>
-                BrainGig exists to close that gap. We handle the digital side of the business —
+                BrainGig Pty Ltd exists to close that gap. We handle the digital side of the business —
                 website, online store, branding, search visibility, and campaigns — so what people
                 find online matches the standard of the work you actually do.
               </p>

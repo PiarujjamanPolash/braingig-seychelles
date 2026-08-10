@@ -1,6 +1,6 @@
 import portHeysey from "@/assets/portfolio-heysey.png";
 import portSshea from "@/assets/portfolio-sshea.png";
-import portMjpillay from "@/assets/portfolio-mjpillay.png";
+import portLocal from "@/assets/mr-local.webp";
 import portPremier from "@/assets/portfolio-premier.png";
 import portConfident from "@/assets/portfolio-confident.png";
 import portDmartiis from "@/assets/portfolio-dmartiis.png";
@@ -37,11 +37,11 @@ export const portfolioProjects: PortfolioProject[] = [
     cls: "md:col-span-5 md:row-span-1",
   },
   {
-    title: "MJ Pillay",
-    tag: "Property Management",
-    location: "Seychelles",
-    href: "https://mjpillay.com/",
-    img: portMjpillay,
+    title: "MR-Local",
+    tag: "Directory",
+    location: "Rhodes",
+    href: "https://mr-local.com/",
+    img: portLocal,
     featured: true,
     cls: "md:col-span-5 md:row-span-1",
   },

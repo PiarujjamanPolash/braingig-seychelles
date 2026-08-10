@@ -33,20 +33,13 @@ const Hero = () => {
       className="relative overflow-hidden md:h-[100svh] md:max-h-[100svh]"
     >
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
+        className="absolute inset-0 -z-10 bg-cover bg-center bg-fixed"
         style={{
           backgroundImage: `url(${heroImg})`,
           transform: `translateY(${offset}px) scale(1.08)`,
-          filter: "saturate(0.9) blur(1.5px)",
         }}
       />
-      <div className="absolute inset-0 -z-10 ocean-overlay" />
-      <div className="absolute inset-0 -z-10 bg-teal-deep/55" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/80 via-teal-deep/40 to-teal-deep/90" />
-      <div
-        className="absolute inset-0 -z-10"
-        style={{ background: "radial-gradient(ellipse 70% 55% at 50% 48%, hsl(var(--teal-deep) / 0.55), transparent 70%)" }}
-      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/70 via-teal-deep/55 to-teal-deep/85" />
 
       <Nav overlay />
 
@@ -79,16 +72,16 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="mt-8 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-6 text-white/85 sm:mt-10 sm:gap-x-5 md:mt-14 md:grid-cols-4 md:justify-items-center">
+        <div className="mt-8 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-6 text-white/85 sm:mt-10 sm:gap-x-4 md:mt-14 md:grid-cols-4 md:gap-x-6">
           {[
             [ShieldCheck, "Direct with the team"],
-            [Smartphone, "Mobile-first & SEO-ready"],
-            [CalendarCheck, "Reply within one working day"],
+            [Smartphone, "Mobile-first"],
+            [Search, "SEO-Optimized"],
             [Zap, "Fast-loading builds"],
           ].map(([Icon, label]) => (
-            <div key={label as string} className="flex items-center gap-2 justify-self-center sm:justify-self-auto md:justify-center">
-              {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 shrink-0 text-sunset" />; })()}
-              <div className="text-left text-[10px] uppercase tracking-[0.14em] md:text-[11px] md:tracking-[0.16em]">{label as string}</div>
+            <div key={label as string} className="flex items-start gap-2 justify-self-start">
+              {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 shrink-0 text-sunset mt-0.5" />; })()}
+              <div className="text-left text-[9px] uppercase tracking-[0.12em] leading-tight sm:text-[10px] sm:tracking-[0.14em] md:text-[11px] md:tracking-[0.16em]">{label as string}</div>
             </div>
           ))}
         </div>
@@ -98,18 +91,23 @@ const Hero = () => {
 };
 
 /* ---------- Marquee strip ---------- */
-const Strip = () => (
-  <div className="w-full max-w-[100vw] overflow-hidden border-y border-border bg-sand/50 py-5">
-    <div className="flex min-w-0 animate-drift items-center justify-around gap-8 whitespace-nowrap px-6 text-xs uppercase tracking-[0.3em] text-ink/60 sm:gap-12 md:text-sm">
-      <span>Mahé</span><span className="text-coral">✦</span>
-      <span>Praslin</span><span className="text-coral">✦</span>
-      <span>La Digue</span><span className="text-coral">✦</span>
-      <span>Silhouette</span><span className="text-coral">✦</span>
-      <span>Curieuse</span><span className="text-coral">✦</span>
-      <span>Aride</span>
+const Strip = () => {
+  const islands = ["Mahé", "Praslin", "La Digue", "Silhouette", "Curieuse", "Aride", "Felicité", "Denis", "Desroches", "Alphonse"];
+  const repeatedIslands = [...islands, ...islands];
+  
+  return (
+    <div className="w-full overflow-hidden border-y border-border bg-sand/50 py-4">
+      <div className="flex animate-marquee gap-8 whitespace-nowrap px-6 text-xs uppercase tracking-[0.3em] text-ink/60 sm:gap-12 md:text-sm">
+        {repeatedIslands.map((island, idx) => (
+          <div key={idx} className="flex items-center gap-8">
+            <span>{island}</span>
+            <span className="text-coral">✦</span>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 /* ---------- Services Overview ---------- */
 const ServicesOverview = () => (
@@ -167,24 +165,11 @@ const ServicesOverview = () => (
 
 /* ---------- Reviews ---------- */
 const reviews = [
-  { name: "Amanda speer", when: "2 months ago", color: "bg-teal", text: "not gonna write a long review but yeah, happy with the work." },
-  { name: "shraddha jadhav", when: "2 months ago", color: "bg-coral", text: "Good overall experience. Site looks clean, loads fast, and we've started getting a few more inquiries since launch." },
   { name: "marco mearini", when: "3 months ago", color: "bg-coral-deep", text: "honestly just needed a decent site and they got it done. nothing fancy but clean and works so im good with it." },
-  { name: "edite ferreira da silva", when: "3 months ago", color: "bg-palm", text: "They did a really good job on our website. not gonna lie we had a few changes during the process but they handled everything pretty calmly and delivered what we asked for." },
   { name: "David Fuentes Rojas", when: "3 months ago", color: "bg-sunset", text: "they helped with both website + seo. still early but we're already seeing some traffic coming in so yeah, pretty happy so far." },
-  { name: "babeeta rani", when: "3 months ago", color: "bg-aqua", text: "We run a directory site and needed something more organized. it's not perfect (nothing ever is lol) but overall way better than what we had before and the team was easy to work with." },
   { name: "Luciano De Martiis", when: "6 months ago", color: "bg-teal-deep", text: "Very positive experience with this agency and its director. I use their services often, and they always resolve issues and deliver excellent results on time." },
   { name: "Ihsan", when: "7 months ago", color: "bg-palm", text: "Really good service. They created a complex webpage for my business. Love it. I will do in future all my webpages from them. Many thanks to the whole team." },
 ];
-
-const GoogleMark = () => (
-  <svg viewBox="0 0 48 48" className="h-5 w-5 shrink-0" aria-hidden="true">
-    <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.2-.1-2.3-.4-3.5z"/>
-    <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/>
-    <path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.3 0-9.7-3.1-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/>
-    <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.6l6.2 5.2C37 41 44 36 44 24c0-1.2-.1-2.3-.4-3.5z"/>
-  </svg>
-);
 
 const ReviewCard = ({ r }: { r: (typeof reviews)[number] }) => {
   const [open, setOpen] = useState(false);
@@ -201,7 +186,6 @@ const ReviewCard = ({ r }: { r: (typeof reviews)[number] }) => {
             <div className="text-sm text-muted-foreground">{r.when}</div>
           </div>
         </div>
-        <GoogleMark />
       </div>
 
       <div className="mt-4 flex items-center gap-1.5">
@@ -265,21 +249,25 @@ const industries = [
     icon: ShoppingBag, title: "Retail & eCommerce", img: hotelsImg,
     text: "Shops and suppliers selling online properly — stock, payments, and delivery handled.",
     points: ["Product catalogues", "Card payments", "Stock & order automation"],
+    link: "/services/ecommerce",
   },
   {
     icon: Utensils, title: "Restaurants & Cafés", img: beachImg,
     text: "Menus, reservations, and a presence that fills tables on quiet weeknights too.",
     points: ["Digital menus", "Table reservations", "Google Business & reviews"],
+    link: "/services/business-websites",
   },
   {
     icon: Briefcase, title: "Professional Services", img: yachtImg,
     text: "Clinics, law firms, consultants, and agencies that need to look established online.",
     points: ["Credibility-first pages", "Appointment enquiries", "Local search visibility"],
+    link: "/services/business-websites",
   },
   {
     icon: HardHat, title: "Trades, Marine & Tourism", img: divingImg,
     text: "Contractors, workshops, charters, and operators turning enquiries into booked jobs.",
     points: ["Project & fleet galleries", "Quote request forms", "WhatsApp handoff"],
+    link: "/services/business-websites",
   },
 ];
 
@@ -312,15 +300,22 @@ const Industries = () => {
         <Reveal>
           <div className="hidden h-[34rem] gap-3 md:flex">
             {industries.map((it, i) => (
-              <motion.button
+              <Link
+                to={it.link}
                 key={it.title}
                 onMouseEnter={() => setActive(i)}
                 onFocus={() => setActive(i)}
-                onClick={() => setActive(i)}
-                animate={{ flex: active === i ? 4 : 1 }}
-                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                onClick={(e) => {
+                  if (active !== i) {
+                    e.preventDefault();
+                    setActive(i);
+                  }
+                }}
                 className="group relative overflow-hidden rounded-[2rem] text-left shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-coral"
-                style={{ flex: active === i ? 4 : 1 }}
+                style={{
+                  flex: active === i ? 4 : 1,
+                  transition: "flex 0.7s cubic-bezier(0.22, 1, 0.36, 1)",
+                }}
               >
                 <img src={it.img} alt={it.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/95 via-teal-deep/60 to-teal-deep/30" />
@@ -361,11 +356,14 @@ const Industries = () => {
                             </li>
                           ))}
                         </ul>
+                        <div className="mt-6 flex items-center gap-2 text-sm font-medium text-coral">
+                          Explore <ArrowUpRight className="h-4 w-4" />
+                        </div>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.button>
+              </Link>
             ))}
           </div>
         </Reveal>
@@ -374,17 +372,22 @@ const Industries = () => {
         <div className="grid gap-5 md:hidden">
           {industries.map((it, i) => (
             <Reveal key={it.title} delay={i * 0.05}>
-              <article className="relative overflow-hidden rounded-[2rem] shadow-soft">
-                <img src={it.img} alt={it.title} loading="lazy" className="h-72 w-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/[0.92] via-teal-deep/55 to-teal-deep/25" />
-                <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
-                  <span className="grid h-11 w-11 place-items-center rounded-full bg-background/90"><it.icon className="h-5 w-5 text-teal" /></span>
-                  <div>
-                    <h3 className="font-display text-2xl font-bold">{it.title}</h3>
-                    <p className="mt-1 text-sm text-white/80">{it.text}</p>
+              <Link to={it.link} className="group block">
+                <article className="relative overflow-hidden rounded-[2rem] shadow-soft transition-shadow group-hover:shadow-lg">
+                  <img src={it.img} alt={it.title} loading="lazy" className="h-72 w-full object-cover transition-transform group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/[0.92] via-teal-deep/55 to-teal-deep/25" />
+                  <div className="absolute inset-0 flex flex-col justify-between p-6 text-white">
+                    <span className="grid h-11 w-11 place-items-center rounded-full bg-background/90"><it.icon className="h-5 w-5 text-teal" /></span>
+                    <div>
+                      <h3 className="font-display text-2xl font-bold">{it.title}</h3>
+                      <p className="mt-1 text-sm text-white/80">{it.text}</p>
+                      <div className="mt-3 flex items-center gap-2 text-xs font-medium text-coral uppercase tracking-[0.2em]">
+                        Explore <ArrowUpRight className="h-3 w-3" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </Link>
             </Reveal>
           ))}
         </div>

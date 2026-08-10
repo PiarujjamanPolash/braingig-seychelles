@@ -35,60 +35,64 @@ const Nav = ({ overlay = false }: { overlay?: boolean }) => {
       {!solid && (
         <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-teal-deep/70 to-transparent" />
       )}
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-        <Logo light={!solid} />
+      <div className="relative px-6 md:px-10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
+          <Logo light={!solid} />
 
-        <nav className="hidden items-center gap-9 md:flex">
-          <Link to="/" className={`text-sm transition-colors ${linkCls}`}>Home</Link>
+          <nav className="hidden items-center gap-9 md:flex">
+            <Link to="/" className={`text-sm transition-colors ${linkCls}`}>Home</Link>
 
-          <div className="relative" onMouseEnter={() => setOpenMega(true)}>
-            <Link to="/services" className={`inline-flex items-center gap-1 text-sm transition-colors ${linkCls}`}>
-              Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openMega ? "rotate-180" : ""}`} />
+            <div className="relative" onMouseEnter={() => setOpenMega(true)}>
+              <Link to="/services" className={`inline-flex items-center gap-1 text-sm transition-colors ${linkCls}`}>
+                Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${openMega ? "rotate-180" : ""}`} />
+              </Link>
+            </div>
+
+            <Link to="/about-us" className={`text-sm transition-colors ${linkCls}`}>About Us</Link>
+            <Link to="/contact-us" className={`text-sm transition-colors ${linkCls}`}>Contact</Link>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Link
+              to="/contact-us"
+              className="group hidden items-center gap-2 rounded-full bg-coral px-5 py-2.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:inline-flex"
+            >
+              Start a Project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
+            <button
+              aria-label="Toggle menu"
+              onClick={() => setMobile((v) => !v)}
+              className={`grid h-10 w-10 place-items-center rounded-full border md:hidden ${
+                solid ? "border-border text-ink" : "border-white/30 text-white"
+              }`}
+            >
+              {mobile ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
           </div>
-
-          <Link to="/about-us" className={`text-sm transition-colors ${linkCls}`}>About Us</Link>
-          <Link to="/contact-us" className={`text-sm transition-colors ${linkCls}`}>Contact</Link>
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <Link
-            to="/contact-us"
-            className="group hidden items-center gap-2 rounded-full bg-coral px-5 py-2.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:inline-flex"
-          >
-            Start a Project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-          </Link>
-          <button
-            aria-label="Toggle menu"
-            onClick={() => setMobile((v) => !v)}
-            className={`grid h-10 w-10 place-items-center rounded-full border md:hidden ${
-              solid ? "border-border text-ink" : "border-white/30 text-white"
-            }`}
-          >
-            {mobile ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
         </div>
       </div>
 
       {/* Mega menu */}
       {openMega && (
         <div className="hidden border-t border-border bg-background/95 backdrop-blur-xl md:block">
-          <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-2 px-6 py-8 md:grid-cols-4 md:px-10">
-            {services.map((s) => (
-              <Link
-                key={s.slug}
-                to={`/services/${s.slug}`}
-                className="group rounded-2xl p-4 transition-colors hover:bg-sand/60"
-              >
-                <span className="inline-flex items-center gap-3">
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-secondary text-teal">
-                    <s.icon className="h-4 w-4" />
+          <div className="px-6 md:px-10">
+            <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-2 py-8 md:grid-cols-4">
+              {services.map((s) => (
+                <Link
+                  key={s.slug}
+                  to={`/services/${s.slug}`}
+                  className="group rounded-2xl p-4 transition-colors hover:bg-sand/60"
+                >
+                  <span className="inline-flex items-center gap-3">
+                    <span className="grid h-9 w-9 place-items-center rounded-full bg-secondary text-teal">
+                      <s.icon className="h-4 w-4" />
+                    </span>
+                    <span className="font-display text-sm font-bold text-ink group-hover:text-coral">{s.title}</span>
                   </span>
-                  <span className="font-display text-sm font-bold text-ink group-hover:text-coral">{s.title}</span>
-                </span>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.short}</p>
-              </Link>
-            ))}
+                  <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{s.short}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       )}

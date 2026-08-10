@@ -63,18 +63,16 @@ const Services = () => {
 
     <Section className="bg-gradient-cream">
       <Reveal>
-        <div className="grid gap-8 md:grid-cols-12 md:items-end">
-          <div className="md:col-span-7">
+        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— How engagements work</span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.08] text-ink md:text-5xl">
               Start focused. Scale as it keeps <span className="font-normal text-coral">working.</span>
             </h2>
           </div>
-          <div className="md:col-span-5">
-            <Link to="/contact-us" className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
-              Start a project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
+          <Link to="/contact-us" className="group inline-flex shrink-0 items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
+            Start a project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </Reveal>
 

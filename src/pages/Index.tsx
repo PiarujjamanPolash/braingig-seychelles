@@ -43,47 +43,49 @@ const Hero = () => {
 
       <Nav overlay />
 
-      <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center px-5 pb-12 pt-24 text-center sm:px-6 sm:pb-14 sm:pt-28 md:h-full md:justify-center md:px-10 md:pb-10">
-        <div className="animate-fade-up flex w-full flex-col items-center">
-          <span className="mb-4 inline-flex max-w-full items-center gap-2 self-center rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur-md sm:mb-5 sm:px-4 sm:tracking-[0.2em] sm:text-[11px]">
-            <Palmtree className="h-3.5 w-3.5 shrink-0" /> Digital Growth Agency · Seychelles
-          </span>
-          {/* w-full prevents text-balance from shrink-wrapping into a narrow column on mobile */}
-          <h1 className="w-full font-display text-[clamp(1.75rem,7vw,4.75rem)] font-semibold leading-[1.12] text-white text-balance [text-shadow:0_2px_28px_hsl(var(--teal-deep)/0.7)] sm:leading-[1.06]">
-            We build websites that turn<br className="hidden sm:block" />{" "}
-            attention into <span className="text-sunset font-normal">business growth.</span>
-          </h1>
-          <p className="mt-4 w-full max-w-2xl text-[0.9375rem] leading-relaxed text-white/95 text-pretty [text-shadow:0_1px_16px_hsl(var(--teal-deep)/0.65)] sm:mt-5 sm:text-base md:text-lg">
-            Strategy, design, development, SEO, and marketing for Seychelles businesses —
-            shops, restaurants, clinics, contractors, and service providers who want their
-            website to actually bring in customers.
-          </p>
-          <div className="mt-7 flex w-full flex-col items-center gap-3.5 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-5">
-            <a
-              href="/services"
-              className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-coral px-6 py-3.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:w-auto sm:max-w-none sm:px-7 sm:py-3.5 sm:text-base"
-            >
-              Explore Our Services
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </a>
-            <a href="#work" className="group inline-flex items-center gap-2 py-1 text-sm text-white/90">
-              <span className="hidden h-px w-10 bg-white/60 transition-all group-hover:w-16 sm:block" /> See Our Work
-            </a>
-          </div>
-        </div>
-
-        <div className="mt-8 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-6 text-white/85 sm:mt-10 sm:gap-x-4 md:mt-14 md:grid-cols-4 md:gap-x-6">
-          {[
-            [ShieldCheck, "Direct with the team"],
-            [Smartphone, "Mobile-first"],
-            [Search, "SEO-Optimized"],
-            [Zap, "Fast-loading builds"],
-          ].map(([Icon, label]) => (
-            <div key={label as string} className="flex items-start gap-2 justify-self-start">
-              {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 shrink-0 text-sunset mt-0.5" />; })()}
-              <div className="text-left text-[9px] uppercase tracking-[0.12em] leading-tight sm:text-[10px] sm:tracking-[0.14em] md:text-[11px] md:tracking-[0.16em]">{label as string}</div>
+      <div className="relative flex w-full flex-col items-center px-6 pb-12 pt-24 text-center sm:pb-14 sm:pt-28 md:h-full md:justify-center md:px-10 md:pb-10">
+        <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
+          <div className="animate-fade-up flex w-full max-w-5xl flex-col items-center">
+            <span className="mb-4 inline-flex max-w-full items-center gap-2 self-center rounded-full border border-white/30 bg-white/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.18em] text-white backdrop-blur-md sm:mb-5 sm:px-4 sm:tracking-[0.2em] sm:text-[11px]">
+              <Palmtree className="h-3.5 w-3.5 shrink-0" /> Digital Growth Agency · Seychelles
+            </span>
+            {/* w-full prevents text-balance from shrink-wrapping into a narrow column on mobile */}
+            <h1 className="w-full font-display text-[clamp(1.75rem,7vw,4.75rem)] font-semibold leading-[1.12] text-white text-balance [text-shadow:0_2px_28px_hsl(var(--teal-deep)/0.7)] sm:leading-[1.06]">
+              We build websites that turn<br className="hidden sm:block" />{" "}
+              attention into <span className="text-sunset font-normal">business growth.</span>
+            </h1>
+            <p className="mt-4 w-full max-w-2xl text-[0.9375rem] leading-relaxed text-white/95 text-pretty [text-shadow:0_1px_16px_hsl(var(--teal-deep)/0.65)] sm:mt-5 sm:text-base md:text-lg">
+              Strategy, design, development, SEO, and marketing for Seychelles businesses —
+              shops, restaurants, clinics, contractors, and service providers who want their
+              website to actually bring in customers.
+            </p>
+            <div className="mt-7 flex w-full flex-col items-center gap-3.5 sm:mt-8 sm:w-auto sm:flex-row sm:flex-wrap sm:justify-center sm:gap-5">
+              <a
+                href="/services"
+                className="group inline-flex w-full max-w-xs items-center justify-center gap-3 rounded-full bg-coral px-6 py-3.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep hover:shadow-float sm:w-auto sm:max-w-none sm:px-7 sm:py-3.5 sm:text-base"
+              >
+                Explore Our Services
+                <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a href="#work" className="group inline-flex items-center gap-2 py-1 text-sm text-white/90">
+                <span className="hidden h-px w-10 bg-white/60 transition-all group-hover:w-16 sm:block" /> See Our Work
+              </a>
             </div>
-          ))}
+          </div>
+
+          <div className="mt-8 grid w-full grid-cols-2 gap-x-3 gap-y-4 border-t border-white/15 pt-6 text-white/85 sm:mt-10 sm:gap-x-4 md:mt-14 md:grid-cols-4 md:gap-x-6">
+            {[
+              [ShieldCheck, "Direct with the team"],
+              [Smartphone, "Mobile-first"],
+              [Search, "SEO-Optimized"],
+              [Zap, "Fast-loading builds"],
+            ].map(([Icon, label]) => (
+              <div key={label as string} className="flex items-start gap-2 justify-self-start">
+                {(() => { const I = Icon as typeof Palmtree; return <I className="h-4 w-4 shrink-0 text-sunset mt-0.5" />; })()}
+                <div className="text-left text-[9px] uppercase tracking-[0.12em] leading-tight sm:text-[10px] sm:tracking-[0.14em] md:text-[11px] md:tracking-[0.16em]">{label as string}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

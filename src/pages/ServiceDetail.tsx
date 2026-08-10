@@ -111,7 +111,9 @@ const ServiceDetail = () => {
         <Reveal>
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-12 md:gap-6">
             <h2 className="font-display text-3xl font-semibold text-ink md:text-4xl">Explore other services</h2>
-            <Link to="/services" className="text-sm font-medium text-coral">View all services →</Link>
+            <Link to="/services" className="group inline-flex items-center gap-2 text-sm font-medium text-coral">
+              View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">

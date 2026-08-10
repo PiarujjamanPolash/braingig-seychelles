@@ -26,7 +26,7 @@ const Services = () => {
 
     <Section>
       <Reveal>
-        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 text-center md:mb-16 md:grid-cols-12 md:gap-10 md:text-left">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— What we do</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -63,7 +63,7 @@ const Services = () => {
 
     <Section className="bg-gradient-cream">
       <Reveal>
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col items-center gap-8 text-center md:flex-row md:items-center md:justify-between md:text-left">
           <div className="max-w-2xl">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— How engagements work</span>
             <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.08] text-ink md:text-5xl">
@@ -83,7 +83,7 @@ const Services = () => {
           { n: "03", t: "Grow", d: "Search, content, and campaigns keep the calendar full through every season." },
         ].map((b, i) => (
           <Reveal key={b.n} delay={i * 0.1}>
-            <div className="group rounded-[2rem] border border-border bg-card p-8 shadow-soft transition-all hover:-translate-y-1 hover:shadow-float">
+            <div className="group rounded-[2rem] border border-border bg-card p-8 text-center shadow-soft transition-all hover:-translate-y-1 hover:shadow-float md:text-left">
               <div className="font-display text-5xl font-bold text-aqua/50 transition-colors group-hover:text-coral">{b.n}</div>
               <h3 className="mt-4 font-display text-2xl font-bold text-ink">{b.t}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{b.d}</p>

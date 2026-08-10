@@ -38,7 +38,7 @@ export const PortfolioCard = ({
         <span className="h-1.5 w-1.5 rounded-full bg-coral" /> {tag}
       </div>
     </a>
-    <div className="mt-4 px-1">
+    <div className="mt-4 px-1 text-center md:text-left">
       <h3 className="font-display text-lg font-semibold text-ink">
         {title}
       </h3>
@@ -77,7 +77,7 @@ const PortfolioSection = ({
   <section id={id} className={cn("relative px-6 py-16 md:px-10 md:py-32", className)}>
     <div className="mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 text-center md:mb-16 md:grid-cols-12 md:gap-10 md:text-left">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">{eyebrow}</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">

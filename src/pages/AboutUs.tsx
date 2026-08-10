@@ -35,25 +35,27 @@ const AboutUs = () => {
       <div className="grid gap-8 md:grid-cols-12 md:gap-14">
         <div className="md:col-span-7">
           <Reveal>
-            <span className="text-xs uppercase tracking-[0.25em] text-palm">— Our story</span>
-            <h2 className="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.08] text-ink">
-              Strong businesses, <span className="font-normal text-coral">weak websites.</span>
-            </h2>
-            <div className="mt-6 space-y-5 text-muted-foreground md:text-lg">
-              <p>
-                We kept seeing the same gap. A shop with loyal customers and no way to sell online.
-                A clinic doing excellent work behind a page that loads in nine seconds. A contractor
-                losing quotes to a competitor with a better first impression.
-              </p>
-              <p>
-                BrainGig Pty Ltd exists to close that gap. We handle the digital side of the business —
-                website, online store, branding, search visibility, and campaigns — so what people
-                find online matches the standard of the work you actually do.
-              </p>
-              <p>
-                We are deliberately small, deliberately hands-on, and focused on one measure of
-                success: more enquiries and more revenue for the people we work with.
-              </p>
+            <div className="text-center md:text-left">
+              <span className="text-xs uppercase tracking-[0.25em] text-palm">— Our story</span>
+              <h2 className="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.08] text-ink">
+                Strong businesses, <span className="font-normal text-coral">weak websites.</span>
+              </h2>
+              <div className="mt-6 space-y-5 text-muted-foreground md:text-lg">
+                <p>
+                  We kept seeing the same gap. A shop with loyal customers and no way to sell online.
+                  A clinic doing excellent work behind a page that loads in nine seconds. A contractor
+                  losing quotes to a competitor with a better first impression.
+                </p>
+                <p>
+                  BrainGig Pty Ltd exists to close that gap. We handle the digital side of the business —
+                  website, online store, branding, search visibility, and campaigns — so what people
+                  find online matches the standard of the work you actually do.
+                </p>
+                <p>
+                  We are deliberately small, deliberately hands-on, and focused on one measure of
+                  success: more enquiries and more revenue for the people we work with.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -74,7 +76,7 @@ const AboutUs = () => {
             ["2x", "Average lift in enquiries"],
             ["24h", "Typical response time"],
           ].map(([n, l]) => (
-            <div key={l}>
+            <div key={l} className="text-center md:text-left">
               <div className="font-display text-4xl font-bold text-sunset sm:text-5xl md:text-6xl">{n}</div>
               <div className="mt-3 text-sm text-white/70">{l}</div>
             </div>
@@ -85,7 +87,7 @@ const AboutUs = () => {
 
     <Section className="bg-gradient-cream">
       <Reveal>
-        <div className="mb-8 max-w-3xl md:mb-14">
+        <div className="mx-auto mb-8 max-w-3xl text-center md:mx-0 md:mb-14 md:text-left">
           <span className="text-xs uppercase tracking-[0.25em] text-palm">— How we work</span>
           <h2 className="mt-4 font-display text-[clamp(1.9rem,4.5vw,3rem)] font-semibold leading-[1.08] text-ink">
             The principles behind every <span className="font-normal text-coral">project.</span>
@@ -106,7 +108,7 @@ const AboutUs = () => {
         ))}
       </div>
       <Reveal>
-        <div className="mt-8 md:mt-14">
+        <div className="mt-8 flex justify-center md:mt-14 md:justify-start">
           <Link to="/services" className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
             See what we do <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>

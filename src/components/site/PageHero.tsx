@@ -21,8 +21,8 @@ const PageHero = ({
     />
     <div className="absolute inset-0 -z-10 bg-gradient-to-b from-teal-deep/70 via-teal-deep/55 to-teal-deep/85" />
     <div className="relative flex w-full flex-1 flex-col px-6 pb-12 pt-28 md:justify-center md:px-10 md:pb-20">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-start">
-        <nav className="mb-6 flex flex-wrap items-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/60">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center text-center md:items-start md:text-left">
+        <nav className="mb-6 flex flex-wrap items-center justify-center gap-1.5 text-[11px] uppercase tracking-[0.2em] text-white/60 md:justify-start">
           <Link to="/" className="hover:text-white">Home</Link>
           {crumbs.map((c) => (
             <span key={c.label} className="flex items-center gap-1.5">

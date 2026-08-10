@@ -119,7 +119,7 @@ const ServicesOverview = () => (
 
     <div className="relative mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 text-center md:mb-16 md:grid-cols-12 md:gap-10 md:text-left">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— What we do</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -155,7 +155,7 @@ const ServicesOverview = () => (
         ))}
       </div>
 
-      <Reveal className="mt-8 md:mt-12">
+      <Reveal className="mt-8 flex justify-center md:mt-12 md:justify-start">
         <Link to="/services" className="group inline-flex items-center gap-3 rounded-full bg-coral px-7 py-4 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep">
           View all services <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
@@ -215,7 +215,7 @@ const Reviews = () => (
   <section className="px-6 py-16 md:px-10 md:py-32">
     <div className="mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-8 grid items-end gap-5 md:mb-16 md:grid-cols-12 md:gap-10">
+        <div className="mb-8 grid items-end gap-5 text-center md:mb-16 md:grid-cols-12 md:gap-10 md:text-left">
           <div className="md:col-span-7">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— Testimonials</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
@@ -283,7 +283,7 @@ const Industries = () => {
 
       <div className="relative mx-auto max-w-7xl">
         <Reveal>
-          <div className="mb-8 flex flex-col items-start justify-between gap-5 md:mb-16 md:flex-row md:items-end md:gap-8">
+          <div className="mb-8 flex flex-col items-center justify-between gap-5 text-center md:mb-16 md:flex-row md:items-end md:gap-8 md:text-left">
             <div className="max-w-2xl">
               <span className="text-xs uppercase tracking-[0.25em] text-palm">— Who we work with</span>
               <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.04] text-ink">
@@ -414,18 +414,18 @@ const Process = () => (
 
     <div className="relative mx-auto max-w-7xl">
       <Reveal>
-        <div className="grid gap-8 md:grid-cols-12 md:items-end md:gap-10">
+        <div className="grid gap-8 text-center md:grid-cols-12 md:items-end md:gap-10 md:text-left">
           <div className="md:col-span-8">
             <span className="text-xs uppercase tracking-[0.25em] text-palm">— The BrainGig way</span>
             <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06] text-ink">
               Calm process. <span className="text-coral font-normal">Sharp output.</span>
             </h2>
-            <p className="mt-4 max-w-xl text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground md:mx-0 md:text-lg">
               Five steps, no surprises. You always know what is happening, who is doing it,
               and what comes next. Typical timeline: 4–10 weeks.
             </p>
           </div>
-          <div className="md:col-span-4 md:justify-self-end">
+          <div className="flex justify-center md:col-span-4 md:justify-end">
             <Link to="/contact-us" className="group inline-flex items-center gap-3 rounded-full bg-coral px-6 py-3.5 text-sm font-medium text-white shadow-coral transition-all hover:bg-coral-deep sm:px-7 sm:py-4">
               Start a project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
@@ -465,7 +465,7 @@ const Promises = () => (
 
     <div className="relative mx-auto max-w-7xl">
       <Reveal>
-        <div className="mb-8 max-w-3xl md:mb-16">
+        <div className="mx-auto mb-8 max-w-3xl text-center md:mx-0 md:mb-16 md:text-left">
           <span className="text-xs uppercase tracking-[0.25em] text-aqua">— Our promises to you</span>
           <h2 className="mt-4 font-display text-[clamp(2rem,5vw,3.75rem)] font-semibold leading-[1.06]">
             We don't just build websites.<br />
@@ -482,7 +482,7 @@ const Promises = () => (
 
         ].map((b, i) => (
           <Reveal key={b.n} delay={i * 0.12}>
-            <div className="group">
+            <div className="group text-center md:text-left">
               <div className="font-display text-6xl font-bold text-aqua/40 transition-colors group-hover:text-coral">{b.n}</div>
               <h3 className="mt-4 font-display text-2xl font-bold text-white md:text-[1.7rem]">{b.t}</h3>
               <p className="mt-3 text-white/70">{b.d}</p>

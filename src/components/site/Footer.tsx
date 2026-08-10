@@ -5,10 +5,12 @@ import Logo from "./Logo";
 const Footer = () => (
   <footer className="border-t border-border bg-sand/40 px-6 py-10 md:px-10 md:py-16">
     <div className="mx-auto max-w-7xl">
-      <div className="grid gap-8 md:grid-cols-12">
+      <div className="grid gap-8 text-center md:grid-cols-12 md:text-left">
         <div className="md:col-span-4">
-          <Logo />
-          <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <div className="flex justify-center md:justify-start">
+            <Logo />
+          </div>
+          <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground md:mx-0">
             BrainGig Pty Ltd is a digital growth agency working with businesses across Seychelles —
             websites, online stores, branding, search, and marketing built to bring in
             more customers.

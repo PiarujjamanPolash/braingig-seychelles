@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import heroImg from "@/assets/service-hero.jpg";
+import heroImg from "@/assets/service-hero.webp";
 import { services } from "@/data/services";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";

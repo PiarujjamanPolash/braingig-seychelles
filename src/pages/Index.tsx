@@ -1,8 +1,8 @@
-import heroImg from "@/assets/hero.png";
-import hotelsImg from "@/assets/re.jpg";
-import beachImg from "@/assets/rc.png";
-import yachtImg from "@/assets/ps.jpg";
-import divingImg from "@/assets/tmt.jpg";
+import heroImg from "@/assets/hero.webp";
+import hotelsImg from "@/assets/re.webp";
+import beachImg from "@/assets/rc.webp";
+import yachtImg from "@/assets/ps.webp";
+import divingImg from "@/assets/tmt.webp";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   ArrowRight, ArrowUpRight, Palmtree, ShoppingBag, Utensils, Briefcase, HardHat,

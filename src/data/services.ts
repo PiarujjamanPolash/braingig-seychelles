@@ -3,13 +3,13 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import hotelsImg from "@/assets/bw-hero.jpg";
-import beachImg from "@/assets/landing-hero-1.jpg";
-import yachtImg from "@/assets/ecom-hero.jpg";
-import divingImg from "@/assets/pm-hero.jpg";
-import port1 from "@/assets/sm-hero.jpg";
-import port2 from "@/assets/seo-hero.jpg";
-import port6 from "@/assets/brand-hero.jpg";
+import hotelsImg from "@/assets/bw-hero.webp";
+import beachImg from "@/assets/landing-hero.webp";
+import yachtImg from "@/assets/ecom-hero.webp";
+import divingImg from "@/assets/pm-hero.webp";
+import port1 from "@/assets/sm-hero.webp";
+import port2 from "@/assets/seo-hero.webp";
+import port6 from "@/assets/brand-hero.webp";
 
 export type Service = {
   slug: string;

@@ -1,5 +1,5 @@
 import { MessageCircle, Phone } from "lucide-react";
-import divingImg from "@/assets/ps-hero.png";
+import divingImg from "@/assets/contact-hero.webp";
 import PageHero, { Section } from "@/components/site/PageHero";
 import Reveal from "@/components/site/Reveal";
 import useSeo from "@/hooks/use-seo";

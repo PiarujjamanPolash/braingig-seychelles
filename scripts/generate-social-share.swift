@@ -4,7 +4,7 @@ import Foundation
 let root = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
 let backgroundURL = root.appendingPathComponent("src/assets/social-share-background.png")
 let logoURL = root.appendingPathComponent("src/assets/braingig-logo-light.png")
-let outputURL = root.appendingPathComponent("public/social-share.png")
+let outputURL = root.appendingPathComponent("public/social-share.jpg")
 
 let canvasWidth: CGFloat = 1200
 let canvasHeight: CGFloat = 630
@@ -151,9 +151,9 @@ drawText(
 
 NSGraphicsContext.restoreGraphicsState()
 
-guard let pngData = bitmap.representation(using: .png, properties: [.compressionFactor: 0.88]) else {
+guard let jpegData = bitmap.representation(using: .jpeg, properties: [.compressionFactor: 0.82]) else {
     fatalError("Could not encode social share image")
 }
 
-try pngData.write(to: outputURL, options: .atomic)
+try jpegData.write(to: outputURL, options: .atomic)
 print(outputURL.path)

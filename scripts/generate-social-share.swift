@@ -116,16 +116,16 @@ drawRoundedRect(accentRect, radius: 3.5, fill: NSColor(calibratedRed: 0.95, gree
 
 drawText(
     "Web Design, SEO &\nDigital Marketing in\nthe Seychelles",
-    in: rectFromTop(x: 78, y: 264, width: 625, height: 158),
-    size: 52,
+    in: rectFromTop(x: 78, y: 264, width: 625, height: 182),
+    size: 50,
     weight: .heavy,
     color: .white,
-    lineHeightMultiple: 0.92
+    lineHeightMultiple: 1.02
 )
 
 drawText(
     "Custom-built websites, online stores, branding and search strategy for island businesses.",
-    in: rectFromTop(x: 82, y: 436, width: 625, height: 74),
+    in: rectFromTop(x: 82, y: 452, width: 625, height: 64),
     size: 24,
     weight: .medium,
     color: NSColor(calibratedRed: 0.90, green: 0.98, blue: 0.98, alpha: 0.92),

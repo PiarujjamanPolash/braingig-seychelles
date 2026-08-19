@@ -115,7 +115,7 @@ let accentRect = rectFromTop(x: 80, y: 238, width: 92, height: 7)
 drawRoundedRect(accentRect, radius: 3.5, fill: NSColor(calibratedRed: 0.95, green: 0.37, blue: 0.24, alpha: 1))
 
 drawText(
-    "Web Design, SEO & Digital Marketing in Seychelles",
+    "Web Design, SEO &\nDigital Marketing in\nthe Seychelles",
     in: rectFromTop(x: 78, y: 264, width: 625, height: 158),
     size: 52,
     weight: .heavy,
